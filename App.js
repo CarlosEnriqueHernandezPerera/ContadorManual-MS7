@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
+import TextButton from './components/TextButton';
+
 
 export default function App() {
   const [conteo, setConteo] = useState(0)
@@ -25,10 +27,12 @@ export default function App() {
 
     <View
     style={styles.controlsContainer}>
-    <Button title='Contar'
+      <TextButton title ='Contar'onTab={Contar}/>
+      <TextButton title ='Reiniciar'onTab={Reiniciar}/>
+    {/* <Button title='Contar'
             onPress={Contar}/>
     <Button title='Reiniciar'
-            onPress={Reiniciar}/>
+            onPress={Reiniciar}/> */}
     </View>
 
     <StatusBar style="auto" />
